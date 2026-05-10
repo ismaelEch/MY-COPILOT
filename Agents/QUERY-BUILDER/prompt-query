@@ -1,0 +1,22 @@
+@workspace utilise :
+- .github/copilot/agent-query-builder.md
+
+Utilise :
+- .github/copilot/dump.sql
+- src/entities
+- src/services
+
+Considère ces fichiers comme source principale de vérité.
+
+IMPORTANT :
+Je veux UNIQUEMENT :
+- une requête SQL optimisée,
+- une requête JPQL optimisée,
+- les filtres,
+- la pagination,
+- les optimisations performance.
+
+Répond uniquement dans le chat.
+
+Demande métier :
+[DEMANDE]

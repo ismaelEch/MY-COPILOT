@@ -1,0 +1,6 @@
+Utilise :
+- .github/copilot/prompts/unit-test-front.prompt.md
+
+Génère les tests pour le code sélectionné.
+Considère les fichiers référencés comme source principale de vérité.
+	
