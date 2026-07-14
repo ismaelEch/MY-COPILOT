@@ -1,90 +1,107 @@
 @workspace utilise .github/copilot/agent-ba-back.md
 
-Analyse l’intégralité du backend NestJS monolithique.
+Analyse l'intégralité du backend Java.
+
+Le projet est basé sur :
+
+- Java 11
+- Maven
+- Packaging WAR
+- Architecture Java d'entreprise
+- JAX-RS
+- MapStruct
+- Jackson
+- Gson
+- Apache CXF
+- Infinispan
+- SLF4J
+- Swagger
+- socle Covea (jee-*)
+- clients SOAP
+- clients HTTP
 
 Objectifs :
-- comprendre l’architecture globale,
-- identifier les modules métier,
-- extraire les règles de gestion implicites,
-- analyser les workflows métier,
-- documenter les composants techniques,
-- cartographier les dépendances inter-modules,
-- analyser les relations TypeORM et la structure MySQL,
-- identifier les permissions, guards et mécanismes de sécurité,
-- documenter les APIs et les flux de données.
+
+- comprendre l'architecture globale
+- identifier les domaines métier
+- identifier les composants techniques
+- documenter les APIs REST JAX-RS
+- documenter les intégrations SOAP
+- analyser les règles métier
+- identifier les workflows métier
+- cartographier les dépendances entre services
+- identifier les validations métier
+- documenter les DTO
+- documenter les modèles
+- documenter les MapStruct Mapper
+- documenter les clients HTTP
+- documenter les clients SOAP
+- documenter le cache Infinispan
+- documenter les mécanismes de sécurité
+- documenter les configurations Maven
+- identifier les dépendances critiques
+- identifier la dette technique
+- détecter les composants fortement couplés
 
 Analyse en priorité :
-- services,
-- controllers,
-- entities,
-- DTO,
-- validators,
-- guards,
-- repositories,
-- interceptors,
-- workflows,
-- routes API,
-- cron jobs,
-- queues,
-- providers.
 
-Génère la documentation complète dans /docs.
+- Services
+- Interfaces
+- Implémentations
+- Ressources REST JAX-RS
+- DTO
+- Modèles
+- Mappers
+- Validators
+- Exceptions
+- Clients SOAP
+- Clients HTTP
+- Cache
+- Configuration Maven
+- pom.xml
+- tests
 
-Produis notamment :
+Génère la documentation dans :
 
-- /docs/architecture/backend-overview.md
-- /docs/modules
-- /docs/business-rules
-- /docs/workflows
-- /docs/api
-- /docs/database
-- /docs/dependencies
+/docs/architecture
+/docs/modules
+/docs/business-rules
+/docs/workflows
+/docs/api
+/docs/integrations
+/docs/cache
+/docs/security
+/docs/dependencies
 
-Pour chaque module métier, documenter :
-- l’objectif métier,
-- les responsabilités,
-- les endpoints API,
-- les entités utilisées,
-- les règles métier,
-- les workflows,
-- les permissions,
-- les dépendances techniques,
-- les risques techniques.
+Pour chaque domaine métier, documenter :
+
+- objectif métier
+- responsabilités
+- endpoints REST
+- services
+- DTO
+- modèles
+- mappers
+- règles métier
+- workflows
+- intégrations externes
+- dépendances
+- risques techniques
 
 Pour chaque règle métier :
-- fournir un identifiant,
-- expliquer la condition,
-- expliquer le comportement attendu,
-- expliquer les exceptions,
-- citer les sources techniques exactes :
-  - fichiers,
-  - services,
-  - méthodes,
-  - validators,
-  - guards,
-  - DTO.
 
-Toujours relier les conclusions au code réel.
-Ne jamais inventer de comportements non observés dans le codebase.
+- générer un identifiant unique
+- décrire la règle
+- expliquer les conditions
+- expliquer le comportement
+- documenter les exceptions
+- citer les classes Java concernées
+- citer les méthodes
+- citer les endpoints REST associés
+- citer les DTO concernés
 
-Identifier également :
-- les couplages forts,
-- les circular dependencies,
-- les composants critiques,
-- les zones sensibles,
-- les risques de dette technique.
+Ne jamais inventer une règle métier.
 
-Utilise uniquement des caractères UTF-8 standards.
-Ne jamais générer :
-- de caractères Unicode invisibles,
-- de caractères de contrôle,
-- de caractères cachés,
-- de texte corrompu.
+Toute conclusion doit être justifiée par le code source.
 
-Le niveau de détail attendu est très poussé.
-La documentation doit être exploitable par :
-- Tech Leads,
-- Business Analysts,
-- développeurs,
-- QA,
-- Product Owners.
+Utiliser uniquement des caractères UTF-8 standards.

@@ -1,0 +1,10 @@
+@workspace
+
+Utilise :
+
+- .github/copilot/agent-ba-back.md
+- .github/copilot/agent-develop-back.md
+
+Exécute la tâche décrite dans :
+
+prompts/develop-back.prompt.md

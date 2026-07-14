@@ -1,98 +1,97 @@
+@workspace
 
-@workspace utilise :
+Utilise uniquement les instructions présentes dans :
+
 - .github/copilot/agent-ba-back.md
 - .github/copilot/agent-develop-back.md
 
-Implémente la fonctionnalité décrite dans le ticket Jira suivant :
+Ces fichiers sont des fichiers de configuration des agents.
+
+Ne jamais les modifier, les régénérer ou proposer leur mise à jour.
+
+Ils servent uniquement de contexte pour réaliser cette tâche.
+
+Implémente la fonctionnalité décrite dans :
+
 /docs/jira/JIRA-123.md
 
-Avant de développer :
+Avant toute modification :
 
-1. Analyser le ticket Jira.
+1. Lire le ticket Jira.
 2. Comprendre le besoin métier.
 3. Identifier les modules impactés.
-4. Lire la documentation existante dans /docs.
-5. Identifier les implémentations similaires déjà présentes dans le projet.
-6. Identifier :
-   - les conventions de nommage,
-   - les patterns d’architecture,
-   - les pratiques de validation,
-   - les pratiques de tests,
-   - les conventions DTO/mapping,
-   - les conventions de gestion des erreurs.
+4. Lire la documentation présente dans /docs.
+5. Identifier les implémentations similaires.
+6. Identifier les conventions du projet.
 
-Respecter strictement :
-- l’architecture existante,
-- les patterns déjà utilisés,
-- les conventions du projet,
-- les pratiques Craft déjà en place.
+Analyser notamment :
+
+- les ressources REST JAX-RS similaires ;
+- les services similaires ;
+- les interfaces similaires ;
+- les DTO similaires ;
+- les Mapper MapStruct similaires ;
+- les validators similaires ;
+- les exceptions similaires ;
+- les clients SOAP similaires ;
+- les clients HTTP similaires ;
+- les tests similaires.
+
+Respecter impérativement :
+
+- l'architecture existante ;
+- les conventions Maven ;
+- l'organisation actuelle des packages ;
+- les patterns déjà utilisés ;
+- les conventions de logging ;
+- la stratégie de gestion des erreurs ;
+- les validations existantes ;
+- les règles métier existantes.
 
 Ne jamais :
-- introduire une nouvelle architecture,
-- créer des patterns non utilisés dans le projet,
-- faire de refactoring global non demandé,
-- modifier des modules non impactés,
-- régénérer la documentation existante dans /docs.
 
-Modifier uniquement :
-- les fichiers nécessaires,
-- les composants impactés,
-- les tests associés.
+- introduire un nouveau framework ;
+- modifier l'architecture ;
+- créer un nouveau pattern ;
+- effectuer un refactoring global ;
+- modifier des modules non concernés ;
+- régénérer la documentation présente dans /docs.
 
-Générer :
-- le code métier,
-- les services,
-- les DTO,
-- les validators,
-- les mappings,
-- les repositories si nécessaire,
-- les contrôleurs si nécessaire,
-- la gestion des erreurs,
-- les tests unitaires JUnit 5,
-- les tests Mockito,
-- les tests de service,
-- les tests de validation.
+Modifier uniquement les composants impactés.
 
-Les tests doivent :
-- couvrir les cas nominaux,
-- couvrir les cas d’erreur,
-- couvrir les validations,
-- couvrir les cas limites,
-- respecter les conventions de test existantes.
+Créer uniquement si nécessaire :
 
-Toujours :
-- privilégier du code lisible,
-- respecter SOLID,
-- respecter Clean Code,
-- éviter la duplication,
-- privilégier la testabilité,
-- limiter le couplage.
+- ressources REST JAX-RS ;
+- services ;
+- interfaces ;
+- DTO ;
+- Mapper MapStruct ;
+- validators ;
+- exceptions ;
+- clients SOAP ;
+- clients HTTP ;
+- configuration.
 
-Avant de générer du code :
-- vérifier les dépendances existantes,
-- vérifier les workflows métier existants,
-- vérifier les règles métier existantes,
-- vérifier les permissions et validations existantes.
+Générer également :
 
-Utilise la documentation existante dans /docs comme source principale de contexte métier et technique.
+- les tests JUnit 5 ;
+- les tests Mockito ;
+- les tests des cas nominaux ;
+- les tests des cas d'erreur ;
+- les tests des validations ;
+- les tests des cas limites.
 
-Ne jamais inventer :
-- de comportements métier,
-- de règles de gestion,
-- de workflows,
-- de validations inexistantes dans le projet.
+Avant de produire le code :
 
-Le code généré doit :
-- être cohérent avec le reste du projet,
-- être prêt pour une Pull Request,
-- être maintenable,
-- être testable,
-- être aligné avec les pratiques existantes.
+- vérifier les dépendances existantes ;
+- vérifier les workflows métier ;
+- vérifier les règles métier ;
+- vérifier les validations ;
+- vérifier les mécanismes de sécurité ;
+- rechercher un composant similaire afin d'en reproduire la structure et les conventions.
 
-Utilise uniquement des caractères UTF-8 standards.
-Ne jamais générer :
-- d’emojis,
-- de caractères Unicode invisibles,
-- de caractères de contrôle,
-- de caractères cachés,
-- de texte corrompu.
+Le code généré doit donner l'impression d'avoir été écrit par les développeurs historiques du projet.
+
+Toute décision doit être justifiée par le code existant.
+
+Utiliser uniquement des caractères UTF-8 standards.
